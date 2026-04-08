@@ -3506,52 +3506,6 @@
     ]
   },
   {
-    "remarks": "🇦🇪  ОАЭ  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0064-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
     "remarks": "🌍 Авто | 🇦🇱 Албания",
     "inbounds": [
       {
@@ -3668,7 +3622,7 @@
     ]
   },
   {
-    "remarks": "🇦🇲  Армения  ",
+    "remarks": "🇧🇪 Бельгия ",
     "inbounds": [
       {
         "port": 10808,
@@ -3682,133 +3636,6 @@
     "outbounds": [
       {
         "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0898-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇦🇷  Аргентина  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-012c-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🌍 Авто | 🇧🇪 Бельгия",
-    "inbounds": [
-      {
-        "tag": "socks",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇧🇪 Бельгия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇧🇪 Бельгия"
-      ]
-    },
-    "outbounds": [
-      {
-        "tag": "🇧🇪 Бельгия",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -3834,29 +3661,6 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇧🇪 Бельгия-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0320-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -4003,52 +3807,6 @@
     ]
   },
   {
-    "remarks": "🇧🇷  Бразилия  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0960-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
     "remarks": "🇧🇾 Беларусь ",
     "inbounds": [
       {
@@ -4101,10 +3859,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇨🇦 Канада",
+    "remarks": "🇨🇦 Канада ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -4113,43 +3870,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇨🇦 Канада"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇨🇦 Канада"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇨🇦 Канада",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4175,29 +3898,6 @@
             "shortId": "a1ab5a56bc42ab",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇨🇦 Канада-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-044c-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -4350,29 +4050,6 @@
         }
       },
       {
-        "tag": "🇨🇭 Швейцария-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-06a4-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -4383,10 +4060,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇨🇿 Чехия",
+    "remarks": "🇨🇿 Чехия ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -4395,43 +4071,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇨🇿 Чехия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇨🇿 Чехия"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇨🇿 Чехия",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4457,29 +4099,6 @@
             "shortId": "a1ab5a56bc42a1",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇨🇿 Чехия-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0384-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -4593,98 +4212,6 @@
         }
       },
       {
-        "tag": "🇩🇪 Германия-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ger-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇩🇪 Германия-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "germ-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇩🇪 Германия-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ger-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇩🇪 Германия-6",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "germ-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -4792,121 +4319,6 @@
             "shortId": "",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇪🇪 Эстония-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇪🇪 Эстония-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇪🇪 Эстония-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0578-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇪🇸  Испания  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-02bc-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -5082,75 +4494,6 @@
         }
       },
       {
-        "tag": "🇫🇮 Финляндия-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇫🇮 Финляндия-6",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇫🇮 Финляндия-7",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0514-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -5161,10 +4504,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇫🇷 Франция",
+    "remarks": "🇫🇷 Франция ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -5173,43 +4515,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇫🇷 Франция"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇫🇷 Франция"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇫🇷 Франция",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5219,29 +4527,6 @@
               "users": [
                 {
                   "id": "bb91dcce-035d-4759-b2d5-bd5bd63a283c",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇫🇷 Франция-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0258-80c1-bed2faeabcfa",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -5368,29 +4653,6 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇬🇧 Великобритания-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-09c4-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -5537,98 +4799,6 @@
     ]
   },
   {
-    "remarks": "🇮🇪  Ирландия  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0a8c-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇮🇳  Индия  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0708-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
     "remarks": "🌍 Авто | 🇯🇵 Япония",
     "inbounds": [
       {
@@ -5682,29 +4852,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0190-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇯🇵 Япония-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "jp1.xxee.ru",
               "port": 443,
               "users": [
@@ -5729,7 +4876,7 @@
         }
       },
       {
-        "tag": "🇯🇵 Япония-3",
+        "tag": "🇯🇵 Япония-2",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5752,7 +4899,7 @@
         }
       },
       {
-        "tag": "🇯🇵 Япония-4",
+        "tag": "🇯🇵 Япония-3",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5785,7 +4932,7 @@
     ]
   },
   {
-    "remarks": "🇰🇷  Южная Корея  ",
+    "remarks": "🇰🇿 Казахстан ",
     "inbounds": [
       {
         "port": 10808,
@@ -5799,87 +4946,6 @@
     "outbounds": [
       {
         "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🌍 Авто | 🇰🇿 Казахстан",
-    "inbounds": [
-      {
-        "tag": "socks",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇰🇿 Казахстан"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇰🇿 Казахстан"
-      ]
-    },
-    "outbounds": [
-      {
-        "tag": "🇰🇿 Казахстан",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5905,29 +4971,6 @@
             "shortId": "ad7dab462a323acb",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇰🇿 Казахстан-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0834-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -6076,29 +5119,6 @@
         }
       },
       {
-        "tag": "🇱🇹 Литва-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0a28-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6109,10 +5129,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇱🇻 Латвия",
+    "remarks": "🇱🇻 Латвия ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -6121,43 +5140,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇱🇻 Латвия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇱🇻 Латвия"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇱🇻 Латвия",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6183,29 +5168,6 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇱🇻 Латвия-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-04b0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -6354,52 +5316,6 @@
         }
       },
       {
-        "tag": "🇳🇱 Нидерланды-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇳🇱 Нидерланды-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6410,10 +5326,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇳🇴 Норвегия",
+    "remarks": "🇳🇴 Норвегия ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -6422,43 +5337,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇳🇴 Норвегия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇳🇴 Норвегия"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇳🇴 Норвегия",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6484,29 +5365,6 @@
             "shortId": "",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇳🇴 Норвегия-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-05dc-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -6655,98 +5513,6 @@
         }
       },
       {
-        "tag": "🇵🇱 Польша-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ger-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇵🇱 Польша-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "germ-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇷🇴  Румыния  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6864,52 +5630,6 @@
             "shortId": "880e94ea9d8617b2",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇷🇺 Россия-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "russ-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇷🇺 Россия-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cluster11.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -7033,7 +5753,7 @@
     ]
   },
   {
-    "remarks": "🇸🇬 Сингапур ",
+    "remarks": "🇹🇷 Турция ",
     "inbounds": [
       {
         "port": 10808,
@@ -7047,133 +5767,6 @@
     "outbounds": [
       {
         "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0640-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇹🇭  Тайланд  ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "cmm-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🌍 Авто | 🇹🇷 Турция",
-    "inbounds": [
-      {
-        "tag": "socks",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇹🇷 Турция"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇹🇷 Турция"
-      ]
-    },
-    "outbounds": [
-      {
-        "tag": "🇹🇷 Турция",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -7199,52 +5792,6 @@
             "shortId": "a1ab5a56bc",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇹🇷 Турция-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0fa0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇹🇷 Турция-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-0fa0-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
@@ -7423,52 +5970,6 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
-        }
-      },
-      {
-        "tag": "🇺🇸 США-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-13.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
-        }
-      },
-      {
-        "tag": "🇺🇸 США-6",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "ing-dop.anti-vpn.ru",
-              "port": 52006,
-              "users": [
-                {
-                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls"
         }
       },
       {
