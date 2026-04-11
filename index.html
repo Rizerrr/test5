@@ -2991,7 +2991,7 @@
     ]
   },
   {
-    "remarks": "=== ↓ ОБХОДЫ ↓ === 11.04",
+    "remarks": "=== ↓ ОБХОДЫ ↓ === 12.04",
     "inbounds": [
       {
         "port": 10808,
@@ -7117,7 +7117,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "nor.kaguya.sbs",
+              "address": "nors.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -7142,6 +7142,35 @@
       },
       {
         "tag": "🇳🇴 Норвегия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "nork.kaguya.sbs",
+              "port": 443,
+              "users": [
+                {
+                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "nor.kaguya.sbs",
+            "publicKey": "mlJj_kqIxaqTDV66BnBvlU5IA5jhbTJmcFdA8hOGxBQ",
+            "shortId": "",
+            "fingerprint": "chrome"
+          }
+        }
+      },
+      {
+        "tag": "🇳🇴 Норвегия-3",
         "protocol": "vless",
         "settings": {
           "vnext": [
