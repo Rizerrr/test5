@@ -673,7 +673,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "mts.kaguya.sbs",
+              "address": "maps.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -1786,7 +1786,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "mts.kaguya.sbs",
+              "address": "maps.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -2899,7 +2899,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "mts.kaguya.sbs",
+              "address": "maps.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -4289,7 +4289,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "mts.kaguya.sbs",
+              "address": "maps.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -5029,10 +5029,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇧🇪 Бельгия",
+    "remarks": "🇧🇪 Бельгия ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -5041,72 +5040,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇧🇪 Бельгия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇧🇪 Бельгия"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇧🇪 Бельгия",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "belru.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "IWVzK4SRydzlSvRNH9Iob0jrpfSaQ8rBcnz6rlqXC2E",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇧🇪 Бельгия-2",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5305,58 +5241,6 @@
         "streamSettings": {
           "network": "tcp",
           "security": "tls"
-        }
-      },
-      {
-        "protocol": "freedom",
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "tag": "block"
-      }
-    ]
-  },
-  {
-    "remarks": "🇧🇾 Беларусь ",
-    "inbounds": [
-      {
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "socks",
-        "settings": {
-          "udp": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "proxy",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "rubel.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "x4s3TbuxVf3dKRCPRuskwRPD5feS4n_mDaSMYveaXHY",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
         }
       },
       {
@@ -6373,35 +6257,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "rufin.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "-uTWl0y4ATFL4GlvIoiQ5nuwqYmNRcLrLYeARlI0uzA",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇫🇮 Финляндия-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "cdn.deploy-assure.ru",
               "port": 443,
               "users": [
@@ -6420,7 +6275,7 @@
         }
       },
       {
-        "tag": "🇫🇮 Финляндия-6",
+        "tag": "🇫🇮 Финляндия-5",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6443,7 +6298,7 @@
         }
       },
       {
-        "tag": "🇫🇮 Финляндия-7",
+        "tag": "🇫🇮 Финляндия-6",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6466,7 +6321,7 @@
         }
       },
       {
-        "tag": "🇫🇮 Финляндия-8",
+        "tag": "🇫🇮 Финляндия-7",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6681,35 +6536,6 @@
       },
       {
         "tag": "🇬🇧 Великобритания-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "rugb.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "y4Ahk4bY4i20KuMpRi-Br4k1x_VkhMEGRXSjDOxDEAQ",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇬🇧 Великобритания-3",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -7361,64 +7187,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "lithua.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "zqylTITq3PsZJIk5__7HlRueby5Uk8668TcGdP7tLgs",
-            "shortId": "",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇱🇹 Литва-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "lit.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "lit.kaguya.sbs",
-            "publicKey": "op8fZITjdxcPA3VGbhOCNDA44vXGY7IcOrUjn53tum0",
-            "shortId": "",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇱🇹 Литва-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "cmm-13.anti-vpn.ru",
               "port": 52006,
               "users": [
@@ -7668,64 +7436,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "neruk.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "i3xg5OZqqQp0w3Bb6jB_0RAJ2-5Ds2yEa4xca5zEax4",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇳🇱 Нидерланды-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "neru.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "i3xg5OZqqQp0w3Bb6jB_0RAJ2-5Ds2yEa4xca5zEax4",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇳🇱 Нидерланды-5",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "cdn.deploy-assure.ru",
               "port": 443,
               "users": [
@@ -7744,7 +7454,7 @@
         }
       },
       {
-        "tag": "🇳🇱 Нидерланды-6",
+        "tag": "🇳🇱 Нидерланды-4",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -7767,7 +7477,7 @@
         }
       },
       {
-        "tag": "🇳🇱 Нидерланды-7",
+        "tag": "🇳🇱 Нидерланды-5",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -7853,7 +7563,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "nork.kaguya.sbs",
+              "address": "nors.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -7878,6 +7588,35 @@
       },
       {
         "tag": "🇳🇴 Норвегия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "nor.kaguya.sbs",
+              "port": 443,
+              "users": [
+                {
+                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "nor.kaguya.sbs",
+            "publicKey": "uawfjobFe92_c8e0B32l39LCTdugH_hz1Gp3-WBSF1g",
+            "shortId": "",
+            "fingerprint": "chrome"
+          }
+        }
+      },
+      {
+        "tag": "🇳🇴 Норвегия-3",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -7992,35 +7731,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "rupl.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "3ljxD76bPh66txDTJC84UGQwIdzpLIf-gd6MdOHXvVc",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇵🇱 Польша-3",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "xlam.kaguya.sbs",
               "port": 443,
               "users": [
@@ -8045,7 +7755,7 @@
         }
       },
       {
-        "tag": "🇵🇱 Польша-4",
+        "tag": "🇵🇱 Польша-3",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -8068,7 +7778,7 @@
         }
       },
       {
-        "tag": "🇵🇱 Польша-5",
+        "tag": "🇵🇱 Польша-4",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -8091,7 +7801,7 @@
         }
       },
       {
-        "tag": "🇵🇱 Польша-6",
+        "tag": "🇵🇱 Польша-5",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -8359,10 +8069,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇸🇪 Швеция",
+    "remarks": "🇸🇪 Швеция ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -8371,43 +8080,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇸🇪 Швеция"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10s",
-        "sampling": 2,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇸🇪 Швеция"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇸🇪 Швеция",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -8427,35 +8102,6 @@
         "streamSettings": {
           "network": "tcp",
           "security": "tls"
-        }
-      },
-      {
-        "tag": "🇸🇪 Швеция-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "swe.whitevpn.top",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "2HkQEy-Ul62UsS5Wh9BwLemqi0jk5MRrZR8msXk0GEY",
-            "shortId": "",
-            "fingerprint": "chrome"
-          }
         }
       },
       {
@@ -8828,35 +8474,6 @@
             "serverName": "raw.githubusercontent.com",
             "publicKey": "flFgUuT_XNfhHeIKary4dXjIpfNPwhUBVlow3ozWiUo",
             "shortId": "880e94ea9d8617b2",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇺🇸 США-4",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "usaru.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "apple.com",
-            "publicKey": "fw71tKQuqtCOAUCX9huZhiuBc9hYcldMj1rYlY8kkTU",
-            "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
         }
