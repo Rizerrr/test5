@@ -4334,9 +4334,10 @@
     ]
   },
   {
-    "remarks": "🇧🇪 Бельгия ",
+    "remarks": "🌍 Авто | 🇧🇪 Бельгия",
     "inbounds": [
       {
+        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -4345,9 +4346,43 @@
         }
       }
     ],
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "socks"
+          ],
+          "balancerTag": "AUTO"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "AUTO",
+          "selector": [
+            "🇧🇪 Бельгия"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "timeout": "2s",
+        "interval": "10000000s",
+        "sampling": 1,
+        "httpMethod": "GET",
+        "destination": "https://www.google.com"
+      },
+      "subjectSelector": [
+        "🇧🇪 Бельгия"
+      ]
+    },
     "outbounds": [
       {
-        "tag": "proxy",
+        "tag": "🇧🇪 Бельгия",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4373,6 +4408,29 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇧🇪 Бельгия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0320-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -4484,9 +4542,10 @@
     ]
   },
   {
-    "remarks": "🇨🇦 Канада ",
+    "remarks": "🌍 Авто | 🇨🇦 Канада",
     "inbounds": [
       {
+        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -4495,9 +4554,43 @@
         }
       }
     ],
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "socks"
+          ],
+          "balancerTag": "AUTO"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "AUTO",
+          "selector": [
+            "🇨🇦 Канада"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "timeout": "2s",
+        "interval": "10000000s",
+        "sampling": 1,
+        "httpMethod": "GET",
+        "destination": "https://www.google.com"
+      },
+      "subjectSelector": [
+        "🇨🇦 Канада"
+      ]
+    },
     "outbounds": [
       {
-        "tag": "proxy",
+        "tag": "🇨🇦 Канада",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4523,6 +4616,29 @@
             "shortId": "a1ab5a56bc42ab",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇨🇦 Канада-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-044c-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -4675,6 +4791,29 @@
         }
       },
       {
+        "tag": "🇨🇭 Швейцария-4",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-06a4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -4685,9 +4824,10 @@
     ]
   },
   {
-    "remarks": "🇨🇿 Чехия ",
+    "remarks": "🌍 Авто | 🇨🇿 Чехия",
     "inbounds": [
       {
+        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -4696,9 +4836,43 @@
         }
       }
     ],
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "socks"
+          ],
+          "balancerTag": "AUTO"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "AUTO",
+          "selector": [
+            "🇨🇿 Чехия"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "timeout": "2s",
+        "interval": "10000000s",
+        "sampling": 1,
+        "httpMethod": "GET",
+        "destination": "https://www.google.com"
+      },
+      "subjectSelector": [
+        "🇨🇿 Чехия"
+      ]
+    },
     "outbounds": [
       {
-        "tag": "proxy",
+        "tag": "🇨🇿 Чехия",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -4724,6 +4898,29 @@
             "shortId": "a1ab5a56bc42a1",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇨🇿 Чехия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0384-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -4980,6 +5177,259 @@
         }
       },
       {
+        "tag": "🇩🇪 Германия-8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-9",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-de-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-10",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-de-2.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-11",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.68",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-12",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "80.93.187.3",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-13",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.93",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-03e8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-14",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-de-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-15",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-de-2.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-16",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.68",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-17",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "80.93.187.3",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-18",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.93",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-01f4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -5077,6 +5527,121 @@
               "users": [
                 {
                   "id": "bb91dcce-035d-4759-b2d5-bd5bd63a283c",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇪🇪 Эстония-3",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇪🇪 Эстония-4",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-europe-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇪🇪 Эстония-5",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "87.228.124.212",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇪🇪 Эстония-6",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "92.53.90.237",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2328-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇪🇪 Эстония-7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0578-80c1-bed2faeabcfa",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -5393,6 +5958,144 @@
         }
       },
       {
+        "tag": "🇫🇮 Финляндия-8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇮 Финляндия-9",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-europe-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇮 Финляндия-10",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.152",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇮 Финляндия-11",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.2",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇮 Финляндия-12",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.86",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0bb8-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇮 Финляндия-13",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0514-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -5490,6 +6193,29 @@
               "users": [
                 {
                   "id": "bb91dcce-035d-4759-b2d5-bd5bd63a283c",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇫🇷 Франция-3",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0258-80c1-bed2faeabcfa",
                   "encryption": "none",
                   "flow": "xtls-rprx-vision"
                 }
@@ -5616,6 +6342,29 @@
             "shortId": "a1ab5a56bcca",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇬🇧 Великобритания-3",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-09c4-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -5813,9 +6562,10 @@
     ]
   },
   {
-    "remarks": "🇰🇿 Казахстан ",
+    "remarks": "🌍 Авто | 🇰🇿 Казахстан",
     "inbounds": [
       {
+        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -5824,9 +6574,43 @@
         }
       }
     ],
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "socks"
+          ],
+          "balancerTag": "AUTO"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "AUTO",
+          "selector": [
+            "🇰🇿 Казахстан"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "timeout": "2s",
+        "interval": "10000000s",
+        "sampling": 1,
+        "httpMethod": "GET",
+        "destination": "https://www.google.com"
+      },
+      "subjectSelector": [
+        "🇰🇿 Казахстан"
+      ]
+    },
     "outbounds": [
       {
-        "tag": "proxy",
+        "tag": "🇰🇿 Казахстан",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -5852,6 +6636,29 @@
             "shortId": "ad7dab462a323acb",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇰🇿 Казахстан-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0834-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -6000,6 +6807,29 @@
         }
       },
       {
+        "tag": "🇱🇹 Литва-4",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-0a28-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6010,9 +6840,10 @@
     ]
   },
   {
-    "remarks": "🇱🇻 Латвия ",
+    "remarks": "🌍 Авто | 🇱🇻 Латвия",
     "inbounds": [
       {
+        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -6021,9 +6852,43 @@
         }
       }
     ],
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "socks"
+          ],
+          "balancerTag": "AUTO"
+        }
+      ],
+      "balancers": [
+        {
+          "tag": "AUTO",
+          "selector": [
+            "🇱🇻 Латвия"
+          ],
+          "strategy": {
+            "type": "leastPing"
+          }
+        }
+      ]
+    },
+    "burstObservatory": {
+      "pingConfig": {
+        "timeout": "2s",
+        "interval": "10000000s",
+        "sampling": 1,
+        "httpMethod": "GET",
+        "destination": "https://www.google.com"
+      },
+      "subjectSelector": [
+        "🇱🇻 Латвия"
+      ]
+    },
     "outbounds": [
       {
-        "tag": "proxy",
+        "tag": "🇱🇻 Латвия",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -6049,6 +6914,29 @@
             "shortId": "dc4aa6635008a9ae",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇱🇻 Латвия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-04b0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -6224,6 +7112,98 @@
         }
       },
       {
+        "tag": "🇳🇱 Нидерланды-5",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇳🇱 Нидерланды-6",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-europe-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇳🇱 Нидерланды-7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.85",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇳🇱 Нидерланды-8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.24",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1f40-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6337,6 +7317,29 @@
             "shortId": "",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇳🇴 Норвегия-3",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-other-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-05dc-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
@@ -6514,6 +7517,121 @@
         }
       },
       {
+        "tag": "🇵🇱 Польша-5",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇵🇱 Польша-6",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-de-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇵🇱 Польша-7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.152",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇵🇱 Польша-8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.197.2",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇵🇱 Польша-9",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "178.72.181.86",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-2710-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "direct"
       },
@@ -6658,6 +7776,213 @@
             "serviceName": "grpc-tunnel",
             "multiMode": false
           }
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-4",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-russia-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-5",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-russia-3.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-6",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "tegr.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "80.93.187.210",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "95.213.184.3",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-9",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "212.41.8.216",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-10",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "82.202.249.96",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-11",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.246.226.14",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇷🇺 Россия-12",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-07d0-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
         }
       },
       {
@@ -7103,6 +8428,98 @@
             "shortId": "a1ab5a56bc",
             "fingerprint": "chrome"
           }
+        }
+      },
+      {
+        "tag": "🇺🇸 США-3",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cdn.deploy-assure.ru",
+              "port": 443,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇺🇸 США-4",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "cluster-europe-1.firstvideocdn.ru",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇺🇸 США-5",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "87.228.124.212",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
+        }
+      },
+      {
+        "tag": "🇺🇸 США-6",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "92.53.90.237",
+              "port": 52006,
+              "users": [
+                {
+                  "id": "af6b7f2f-6d90-1770-80c1-bed2faeabcfa",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "tls"
         }
       },
       {
