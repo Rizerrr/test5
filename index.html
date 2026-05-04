@@ -4729,7 +4729,7 @@
     ]
   },
   {
-    "remarks": "=== ↓ ОБХОДЫ ↓ === 03.05",
+    "remarks": "=== ↓ ОБХОДЫ ↓ === 04.05",
     "inbounds": [
       {
         "port": 10808,
@@ -8653,10 +8653,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇨🇭 Швейцария",
+    "remarks": "🇨🇭 Швейцария ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -8665,72 +8664,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇨🇭 Швейцария"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10000000s",
-        "sampling": 1,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇨🇭 Швейцария"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇨🇭 Швейцария",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "switzru.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "deepl.com",
-            "publicKey": "FKOb-jxH0ibglDZWGTJBCoN-wqSmL7inG8m1PVu05Vg",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇨🇭 Швейцария-2",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -8926,35 +8862,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "backend.xwhiteness.site",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "backend.xwhiteness.site",
-            "publicKey": "Oi396z5R-YkqkWMnOLHKRYe2EagVTLuPGgdpo1Zeljk",
-            "shortId": "",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇩🇪 Германия-2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "api-maps.xwhiteness.top",
               "port": 443,
               "users": [
@@ -8973,6 +8880,35 @@
           "realitySettings": {
             "serverName": "api-maps.xwhiteness.top",
             "publicKey": "JJFio7WT6anKV5WIkUNkXdzC_wzb0Ih3OWsRJ1HwKAI",
+            "shortId": "",
+            "fingerprint": "chrome"
+          }
+        }
+      },
+      {
+        "tag": "🇩🇪 Германия-2",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "backend.xwhiteness.site",
+              "port": 443,
+              "users": [
+                {
+                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "backend.xwhiteness.site",
+            "publicKey": "Oi396z5R-YkqkWMnOLHKRYe2EagVTLuPGgdpo1Zeljk",
             "shortId": "",
             "fingerprint": "chrome"
           }
@@ -9824,7 +9760,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "login.xwhiteness.site",
+              "address": "api-maps.sempai.site",
               "port": 443,
               "users": [
                 {
@@ -9853,7 +9789,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "finak.kaguya.sbs",
+              "address": "fink.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -10758,7 +10694,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "lithua.kaguya.sbs",
+              "address": "lithuan.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -10844,10 +10780,9 @@
     ]
   },
   {
-    "remarks": "🌍 Авто | 🇱🇻 Латвия",
+    "remarks": "🇱🇻 Латвия ",
     "inbounds": [
       {
-        "tag": "socks",
         "port": 10808,
         "listen": "127.0.0.1",
         "protocol": "socks",
@@ -10856,72 +10791,9 @@
         }
       }
     ],
-    "routing": {
-      "rules": [
-        {
-          "type": "field",
-          "inboundTag": [
-            "socks"
-          ],
-          "balancerTag": "AUTO"
-        }
-      ],
-      "balancers": [
-        {
-          "tag": "AUTO",
-          "selector": [
-            "🇱🇻 Латвия"
-          ],
-          "strategy": {
-            "type": "leastPing"
-          }
-        }
-      ]
-    },
-    "burstObservatory": {
-      "pingConfig": {
-        "timeout": "2s",
-        "interval": "10000000s",
-        "sampling": 1,
-        "httpMethod": "GET",
-        "destination": "https://www.google.com"
-      },
-      "subjectSelector": [
-        "🇱🇻 Латвия"
-      ]
-    },
     "outbounds": [
       {
-        "tag": "🇱🇻 Латвия",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "latru.kaguya.sbs",
-              "port": 443,
-              "users": [
-                {
-                  "id": "e0e8cb01-bfa7-4587-bc74-2eeacf703f03",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "latru.kaguya.sbs",
-            "publicKey": "1lIXBDTm6DG2Bbb7gl90wScWGUBuYGbxqjfZWg4WXjw",
-            "shortId": "dc4aa6635008a9ae",
-            "fingerprint": "chrome"
-          }
-        }
-      },
-      {
-        "tag": "🇱🇻 Латвия-2",
+        "tag": "proxy",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -11036,7 +10908,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "neru.kaguya.sbs",
+              "address": "neruk.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -11065,7 +10937,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "cnetha.kaguya.sbs",
+              "address": "cneth.kaguya.sbs",
               "port": 443,
               "users": [
                 {
@@ -11383,7 +11255,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "front.xwhiteness.site",
+              "address": "login.sempai.site",
               "port": 443,
               "users": [
                 {
@@ -11970,7 +11842,7 @@
         "settings": {
           "vnext": [
             {
-              "address": "deepl.xwhiteness.site",
+              "address": "grok.sempai.site",
               "port": 443,
               "users": [
                 {
